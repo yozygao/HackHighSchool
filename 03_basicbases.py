@@ -1,0 +1,7 @@
+x= int(input("Enter a number: "))
+y=bin(x)
+z=oct(x)
+a=hex(x)
+print(y)
+print(z)
+print(a)
