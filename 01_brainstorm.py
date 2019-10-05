@@ -1,11 +1,15 @@
 import random
 clist=['Overwatch ' ,'BTS ',]
 alist=[]
-x=random.choice(list1)
-input(x)
+x=random.choice(clist)
+print("Your category is " + x)
+answers= []
+
 if x=="Overwatch ":
-    for i in range(9):
-        input("Overwatch ")
+    for i in range(10):
+        answers.append(input(" "))
+
 if x=="BTS ":
-    for i in range(9):
-        input("BTS ")
+    for i in range(10):
+        answers.append(input(" "))
+print("Your answers are " + str(answers))
