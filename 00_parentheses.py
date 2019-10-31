@@ -1,3 +1,4 @@
+x = input("Enter a word here: ")
 def foo(s):
     ret = ""
     i = True
@@ -9,10 +10,24 @@ def foo(s):
         if char != ' ':
             i = not i
     return ret
-x = input("Enter a word here: ")
+
+def replace_vowel(s):
+    word = foo(x)
+    vowels = ("A", "E", "I", "O", "U")
+    for vowels in vowels:
+       word = word.replace(vowels, "*")
+    return word
+def parentheses_check(s):
+    stack = foo(x)
+    for line in s:
+        for c in line:
+            if c == '(':
+                stack.append(c)
+            elif c == ')':
+                if stack[-1] != '(':
+                    print("Balanced? False.")
+                else:
+                    print("Balanded? True.")
 print (foo(x))
-vowels = ["A", "E", "I", "O", "U"]
-new = ["*", "*", "*","*", "*"]
-for i in range(1):
-    new_word = foo(x).replace(vowels[i],new[i])
-print(new_word)
+print(replace_vowel(x))
+print(parentheses_check(x))
