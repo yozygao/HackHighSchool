@@ -12,4 +12,5 @@ if x=="Overwatch ":
 if x=="BTS ":
     for i in range(10):
         answers.append(input(" "))
-print("Your answers are " + str(answers))
+a = ("Your answers are " + str(answers))
+print(a.center(100))
