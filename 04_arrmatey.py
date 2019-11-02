@@ -5,6 +5,4 @@ for argv in sys.argv:
         i=i+1
 sys.argv.sort(key = len, reverse = True)
 for x in sys.argv:
-    print(x)
-        
-        
+    print(x) 

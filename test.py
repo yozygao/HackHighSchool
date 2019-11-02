@@ -1,14 +1,11 @@
-x = input("x")
+def check(my_string): 
+    brackets = ['()', '{}', '[]'] 
+    while any(x in my_string for x in brackets): 
+        for br in brackets: 
+            my_string = my_string.replace(br, '') 
+    return not my_string
 
-old =[]
-new= []
+string = "(a)"
+print(string, "-", "Balanced"
+      if check(string) else "Unbalanced")
 
-total= int(input("Number"))
-
-for i in range(total):
-    old.append(input("old character"))
-    new.append(input("new c"))
-
-for i in range(total):
-    user= x.replace(old[i], new[i])
-print(user)
