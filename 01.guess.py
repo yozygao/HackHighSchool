@@ -6,8 +6,7 @@ x = random.choice(words)
 
 lives = 0
 
-print("The first letter of the word is" + " " + x[0])
-
+print(f"The first letter of the word is {x[0]}")
 while lives<10:
     y =  input("GUESS: ")
     if x == y:
