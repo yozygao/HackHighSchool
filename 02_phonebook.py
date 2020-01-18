@@ -77,7 +77,7 @@ first_last = {
         "Ryan":"Situ",
         "Saloni":"Sharma",
         "Samika":"Yedur",
-        "Samvar":"Yedur"
+        "Samvar":"Yedur",
         "Sanjana":"Rathore",
         "Siddharth":"Chavan",
         "Simaal":"Belgaumi",
@@ -96,4 +96,9 @@ first_last = {
         "Ying-Chen":"Chen",
         "Zachary":"Bashkin"
 }
+rev_dict= {}
+for key, value in first_last.item():
+    rev_dict.setdefault(value, set()).add(key)
+result = [key for key, values in rev_dict.items() if len(values)>1]
+print("duplicate values", str(result))
 
