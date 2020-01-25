@@ -1,11 +1,14 @@
-def check(my_string): 
-    brackets = ['()', '{}', '[]'] 
-    while any(x in my_string for x in brackets): 
-        for br in brackets: 
-            my_string = my_string.replace(br, '') 
-    return not my_string
+dic1={}
+dic2={}
+with open("names.txt") as file:
+    for line in file:
+        (firstname, lastname) = line.strip().split(",")
+        if firstname not in dic1:
+            dic1[firstname] = [lastname]
+        else:
+            dic1[firstname] += [lastname]
+print(dic1)
 
-string = "(a)"
-print(string, "-", "Balanced"
-      if check(string) else "Unbalanced")
-
+for key, value in dic1.items():
+    print(key, value)
+    print(f"{key} ({len(value)}): {value}")
